@@ -1,0 +1,230 @@
+/* ======= ESTILOS GENERALES ======= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url('fondo-acuarela.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* ======= HEADER ======= */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  animation: fadeDown 1s ease;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 60px;
+  margin-right: 10px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #0077cc;
+}
+
+.btn-header {
+  background: #0077cc;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn-header:hover {
+  background: #005fa3;
+}
+
+/* ======= HERO ======= */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.5);
+  animation: fadeIn 1.5s ease-in;
+}
+
+.hero-content h2 {
+  font-size: 2.5rem;
+  color: #222;
+}
+
+.hero-content p {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.btn-primary {
+  display: inline-block;
+  margin-top: 25px;
+  background: #ff8ba7;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #ff6f91;
+  transform: scale(1.05);
+}
+
+/* ======= SECCIONES ======= */
+section {
+  padding: 100px 80px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #333;
+}
+
+/* ======= ABOUT ======= */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.about-content {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+}
+
+.about-img img {
+  max-width: 450px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* ======= SERVICIOS ======= */
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 30px;
+  width: 250px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  background: #fdf1f1;
+}
+
+/* ======= PORTAFOLIO ======= */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* ======= CONTACTO ======= */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 40px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 350px;
+}
+
+input, textarea {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #ff6f91;
+}
+
+.info {
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ======= FOOTER ======= */
+.footer {
+  text-align: center;
+  background: rgba(255,255,255,0.8);
+  padding: 20px;
+  backdrop-filter: blur(5px);
+}
+
+/* ======= ANIMACIONES ======= */
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
